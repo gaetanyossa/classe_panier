@@ -12,12 +12,12 @@ class Article:
         
 class Panier:
       def __init__(self, nb_articles = 0, mt_articles = 0, articles = []):
-          self.nb_articles = nb.articles
+          self.nb_articles = nb_articles
           self.mt_articles = mt_articles
           self.articles = articles
     
     # Ajout d'article
-      def ajouter_des_articles(self, article):
+      def ajouter_article(self, article):
          if isinstance(article, Article):
             self.nb_articles+=1
             self.articles.append(article)
@@ -26,7 +26,7 @@ class Panier:
             print("Ce n'est pas un article")
             
     # Retirer article 
-      def retirer_des_articles(self, article):
+      def retirer_article(self, article):
          if article in self.articles:
             self.nb_articles-=1
             self.articles.remove(article)
